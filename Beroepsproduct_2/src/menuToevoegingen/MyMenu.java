@@ -8,13 +8,21 @@ import javafx.scene.layout.Pane;
 
 public class MyMenu extends MenuBar {
 
-	private Menu mPagina1;
-	private MenuItem miPagina1;
+	private Menu mPagina1,mPagina2, mHomePage;
+	private MenuItem miPagina1,miPagina2, miHomePage;
 
 	private Pane root;
 
 	public MyMenu(Pane root) {
 		this.root = root;
+		
+		mHomePage = new Menu("Home");
+		miHomePage = new MenuItem("Home");
+		mHomePage.getItems().add(miHomePage);
+		miHomePage.setOnAction(event -> {
+			root.getChildren().clear();
+			root.getChildren().add(new HomePage());
+		});
 
 		mPagina1 = new Menu("Pagina-1");
 		miPagina1 = new MenuItem("Pagina-1");
@@ -23,8 +31,19 @@ public class MyMenu extends MenuBar {
 			root.getChildren().clear();
 			root.getChildren().add(new Pagina1());
 		});
-
-		this.getMenus().addAll(mPagina1);
+		
+		mPagina2 = new Menu("Pagina-2");
+		miPagina2 = new MenuItem("Pagina-2");
+		mPagina2.getItems().add(miPagina2);
+		miPagina2.setOnAction(event -> {
+			root.getChildren().clear();
+			root.getChildren().add(new Pagina2());
+		});
+		
+		
+		
+		
+		this.getMenus().addAll(mHomePage,mPagina1,mPagina2);
 	}
 
 }
