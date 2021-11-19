@@ -24,20 +24,20 @@ public class MyMenu extends MenuBar {
 			root.getChildren().add(new HomePage());
 		});
 
-		mPagina1 = new Menu("Pagina-1");
-		miPagina1 = new MenuItem("Pagina-1");
+		mPagina1 = new Menu("Auto");
+		miPagina1 = new MenuItem("Auto");
 		mPagina1.getItems().add(miPagina1);
 		miPagina1.setOnAction(event -> {
 			root.getChildren().clear();
-			root.getChildren().add(new Pagina1());
+			root.getChildren().add(new Auto());
 		});
 		
-		mPagina2 = new Menu("Pagina-2");
-		miPagina2 = new MenuItem("Pagina-2");
+		mPagina2 = new Menu("Eigenaar");
+		miPagina2 = new MenuItem("Eigenaar");
 		mPagina2.getItems().add(miPagina2);
 		miPagina2.setOnAction(event -> {
 			root.getChildren().clear();
-			root.getChildren().add(new Pagina2());
+			root.getChildren().add(new Eigenaar());
 		});
 		
 		

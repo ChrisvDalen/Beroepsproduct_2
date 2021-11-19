@@ -9,9 +9,9 @@ import com.sun.javafx.sg.prism.NGNode;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 
-public class Pagina2 extends Pane {
+public class Eigenaar extends Pane {
 
-	public Pagina2() {
+	public Eigenaar() {
 	
 	}
 

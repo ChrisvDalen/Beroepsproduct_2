@@ -2,9 +2,9 @@ package menuToevoegingen;
 
 import javafx.scene.layout.Pane;
 
-public class Pagina1 extends Pane {
+public class Auto extends Pane {
 	
-	public Pagina1() {
+	public Auto() {
 		
 	}
 
