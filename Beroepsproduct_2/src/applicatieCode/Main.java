@@ -36,10 +36,12 @@ public class Main extends Application {
 		VBox vbox = new VBox(menubar, root);
 
 		Scene scene = new Scene(vbox, 700, 700);
+		scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 		vbox.setBackground(new Background(new BackgroundFill(bg, CornerRadii.EMPTY, Insets.EMPTY)));
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Beroepsproduct-2 Overheid Data");
 		primaryStage.show();
+		
 
 	}
 

@@ -8,8 +8,8 @@ import javafx.scene.layout.Pane;
 
 public class MyMenu extends MenuBar {
 
-	private Menu mPagina1,mPagina2, mHomePage;
-	private MenuItem miPagina1,miPagina2, miHomePage;
+	private Menu mPagina1,mPagina2, mHomePage, mPagina3;
+	private MenuItem miPagina1,miPagina2, miHomePage, miPagina3;
 
 	private Pane root;
 
@@ -40,10 +40,19 @@ public class MyMenu extends MenuBar {
 			root.getChildren().add(new Eigenaar());
 		});
 		
+		mPagina3 = new Menu("Overzicht");
+		miPagina3 = new MenuItem("Overzicht");
+		mPagina3.getItems().add(miPagina3);
+		miPagina3.setOnAction(event -> {
+			root.getChildren().clear();
+			root.getChildren().add(new Overzicht());
+		});
 		
 		
 		
-		this.getMenus().addAll(mHomePage,mPagina1,mPagina2);
+		
+		
+		this.getMenus().addAll(mHomePage,mPagina1,mPagina2, mPagina3);
 	}
 
 }
